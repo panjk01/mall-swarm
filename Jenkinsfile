@@ -1,7 +1,7 @@
 pipeline {
     agent any  // 在任意可用节点运行
     parameters {
-        choice(name: 'ENVIRONMENT', choices: ['dev', 'test', 'prod'], defaultValue: 'prod', description: 'Choose the deployment environment')
+        choice(name: 'ENVIRONMENT', choices: ['dev', 'test', 'prod'], default: 'prod', description: 'Choose the deployment environment')
     }
     stages {
         stage('Checkout') {
